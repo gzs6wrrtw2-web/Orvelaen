@@ -1,8 +1,17 @@
 # Orveläen – Première scène : le château
 
-Prototype de départ en Phaser 4 + TypeScript + Vite.
+Prototype Phaser 4 + TypeScript + Vite. La configuration Vite utilise `base: '/Orvelaen/'` pour GitHub Pages.
 
-## Lancer le projet
+## Publication GitHub Pages
+
+1. Copier le contenu de ce dossier à la racine du dépôt `gzs6wrrtw2-web/Orvelaen`.
+2. Dans GitHub, ouvrir **Settings > Pages** et choisir **GitHub Actions** comme source de publication.
+3. Envoyer les modifications sur la branche `main`.
+4. Dans l'onglet **Actions**, attendre la réussite du workflow **Deploy Orvelaen to GitHub Pages**.
+
+Le workflow compile TypeScript et Phaser avec Vite, puis publie le dossier `dist`.
+
+## Développement local
 
 Prérequis : Node.js 20 ou plus récent.
 
@@ -11,9 +20,8 @@ npm install
 npm run dev
 ```
 
-Ouvrir l'adresse locale indiquée par Vite.
+Pour vérifier la compilation :
 
-Pour compiler :
 ```bash
 npm run build
 ```
@@ -24,12 +32,4 @@ npm run build
 - Espace / Entrée ou toucher l'écran : fermer un dialogue
 - Écran tactile : pavé directionnel + bouton E
 
-## État du prototype
-Cette première livraison est un socle jouable avec décor provisoire dessiné en primitives Phaser :
-- cour de château en vue de dessus ;
-- Kanann contrôlable ;
-- collisions aux limites de la carte ;
-- garde, seigneur et écuries interactifs ;
-- dialogue d'introduction et déclenchement de la mission.
-
-Les graphismes sont provisoires. Les prochaines étapes sont la création des sprites pixel art définitifs, les collisions détaillées des bâtiments, la salle du trône et la transition vers le village incendié.
+Les graphismes restent provisoires à ce stade ; cette archive corrige avant tout la chaîne de compilation et de publication.
